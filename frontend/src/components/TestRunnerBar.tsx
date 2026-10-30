@@ -134,4 +134,15 @@ export const TestRunnerBar: React.FC = () => {
             onClick={toggleCollapse}
             title="Esconder cabeçalho de testes"
             aria-label="Esconder cabeçalho de testes"
-            className="flex items-center gap-1.5 px-2.5 py-1 
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white transition-colors border border-zinc-700 text-[11px] font-medium shrink-0 group ml-auto"
+          >
+            <span className="hidden sm:inline text-zinc-300 group-hover:text-white transition-colors">
+              Esconder testes
+            </span>
+            <ChevronUp className="w-3.5 h-3.5 text-brand-primary transition-transform group-hover:-translate-y-0.5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};

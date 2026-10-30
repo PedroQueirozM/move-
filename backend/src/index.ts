@@ -39,3 +39,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Move+ Backend rodando com sucesso na porta ${PORT}`);
   console.log(`📡 URL base: http://localhost:${PORT}/api`);
 });
+
+export default app;
