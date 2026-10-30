@@ -1,0 +1,134 @@
+[
+  {
+    "id": "CT-01",
+    "criterio": "RF01 · CA1",
+    "tipo": "Feliz",
+    "preCondicao": "Aluna Ana (contrato ativo).",
+    "passos": "1. Em T01, tocar em Pilates 14:00 (clique 1). 2. Em T02, tocar em \"Reservar vaga\" (clique 2). 3. Em T03, tocar em \"Confirmar reserva\" (clique 3).",
+    "entrada": "Aula: Pilates 14:00 (9/15).",
+    "esperado": "T04 com \"Vaga garantida em Pilates, hoje às 14:00\" e QR Code, em 3 cliques.",
+    "obtido": "T04 com \"Vaga garantida em Pilates, hoje às 14:00. Comprovante enviado por notificação.\" e QR Code da catraca gerado em exatamente 3 cliques.",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-02",
+    "criterio": "RF01 · CA1",
+    "tipo": "Valor-limite",
+    "preCondicao": "Ana; Yoga 19:00 com 19/20.",
+    "passos": "1. T01, Yoga 19:00. 2. T02, Reservar vaga. 3. T03, Confirmar. 4. Voltar a T01.",
+    "entrada": "Última vaga da aula.",
+    "esperado": "T04 de sucesso. Em T01 o Yoga passa de \"1 vagas\" para \"Lotada\".",
+    "obtido": "T04 de sucesso exibida. Ao retornar para T01, a tag de Yoga passou de \"1 vagas\" para \"Lotada\".",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-03",
+    "criterio": "RF01 · CA2",
+    "tipo": "Erro",
+    "preCondicao": "Selecionar o aluno Bruno (inadimplente).",
+    "passos": "1. T01, Pilates 14:00. 2. T02, Reservar vaga. 3. T03, Confirmar reserva.",
+    "entrada": "Aluno: Bruno Lima.",
+    "esperado": "T05 com \"Contrato inadimplente. Não foi possível reservar. Procure a recepção\". Nenhuma vaga é consumida.",
+    "obtido": "T05 com \"Contrato inadimplente. Não foi possível reservar. Procure a recepção para regularizar.\". Ocupação de Pilates mantida em 9/15 (nenhuma vaga consumida).",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-04",
+    "criterio": "RF01 · CA3",
+    "tipo": "Valor-limite",
+    "preCondicao": "Ana; Spinning 18:00 com 20/20.",
+    "passos": "1. T01, Spinning 18:00 (mostra \"Lotada\"). 2. Em T02, tocar em \"Entrar na fila de espera\".",
+    "entrada": "Capacidade em 100%.",
+    "esperado": "T02 sem botão de reserva e com \"Aula lotada\". T06 com \"Posição: 1ª\". Em T07 aparece \"Na fila\".",
+    "obtido": "T02 sem botão de reserva e com \"Aula lotada. Entre na fila de espera para ser avisado se uma vaga abrir.\". T06 com \"Você está na fila de Spinning (18:00). Posição: 1ª. Você será notificado se uma vaga abrir.\". T07 exibe Spinning com tag \"Na fila\".",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-05",
+    "criterio": "RF01 · CA4",
+    "tipo": "Feliz",
+    "preCondicao": "Ana; Hidroginástica 15:00 reservada (5h de antecedência).",
+    "passos": "1. T01, aba \"Meus agendamentos\" (T07). 2. Cancelar em Hidroginástica. 3. Em T08, Confirmar cancelamento.",
+    "entrada": "Aula: 15:00; agora: 10:00.",
+    "esperado": "T09 com \"A vaga foi liberada e o primeiro da fila será notificado\". Hidroginástica sai de T07.",
+    "obtido": "T09 com \"Cancelamento de Hidroginástica (15:00) realizado. A vaga foi liberada e o primeiro da fila de espera será notificado.\". Hidroginástica saiu da lista de agendamentos em T07.",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-06",
+    "criterio": "RF01 · CA4",
+    "tipo": "Valor-limite",
+    "preCondicao": "Ana; Funcional 12:00 reservado (exatamente 2h00 de antecedência).",
+    "passos": "1. T07, Cancelar em Funcional. 2. T08, Confirmar cancelamento.",
+    "entrada": "Aula: 12:00; agora: 10:00.",
+    "esperado": "T09 de sucesso (2h00 é aceito). Em T01 o Funcional passa de 8 para 9 vagas.",
+    "obtido": "T09 de sucesso (exatamente 2h00 aceito). Em T01 o Funcional passou de 8 vagas para \"9 vagas\".",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-07",
+    "criterio": "RF01 · CA5",
+    "tipo": "Valor-limite",
+    "preCondicao": "Ana; Alongamento 11:59 reservado (1h59 de antecedência).",
+    "passos": "1. T07, Cancelar em Alongamento. 2. T08, Confirmar cancelamento.",
+    "entrada": "Aula: 11:59; agora: 10:00.",
+    "esperado": "T10 com \"Faltam menos de 2h... O cancelamento só é aceito até 2h antes\". A reserva continua em T07.",
+    "obtido": "T10 com \"Faltam menos de 2h para Alongamento (11:59). O cancelamento só é aceito até 2h antes. Se não comparecer, será registrada falta.\". A reserva de Alongamento continua listada em T07.",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-08",
+    "criterio": "RF01 · CA6",
+    "tipo": "Feliz",
+    "preCondicao": "Ana logada; outros alunos têm reservas.",
+    "passos": "1. Abrir T07. 2. Abrir T02 de Funcional.",
+    "entrada": "Aluna: Ana.",
+    "esperado": "T07 lista só as reservas da Ana. T02 mostra só \"vagas\", sem nomes de outros alunos.",
+    "obtido": "T07 lista \"Somente agendamentos de Ana.\". T02 mostra apenas as vagas livres sem exibir os nomes de outros alunos.",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-09",
+    "criterio": "RF01 · CA7",
+    "tipo": "Feliz",
+    "preCondicao": "Visão Recepção; Funcional 12:00.",
+    "passos": "1. Abrir T11. 2. Em Ana Souza, tocar em \"Check-in\".",
+    "entrada": "Aluno: Ana Souza.",
+    "esperado": "Ana aparece como \"Presente\".",
+    "obtido": "Ana Souza aparece com a tag \"Presente\".",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-10",
+    "criterio": "RF01 · CA7",
+    "tipo": "Erro",
+    "preCondicao": "Visão Recepção; Carlos sem check-in após a aula.",
+    "passos": "1. T11, tocar em \"Falta\" em Carlos Pires.",
+    "entrada": "Aluno: Carlos Pires.",
+    "esperado": "T12 com \"Falta de Carlos Pires registrada... salva no histórico de assiduidade\". Em T11 aparece \"Falta\".",
+    "obtido": "T12 com \"Falta de Carlos Pires registrada em Funcional (12:00). A ocorrência foi salva no histórico de assiduidade do aluno.\". Ao retornar a T11, Carlos Pires aparece com tag \"Falta\".",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-11",
+    "criterio": "RF01 · CA8",
+    "tipo": "Erro (concorrência)",
+    "preCondicao": "Yoga 19:00 com 1 vaga; dois usuários reservando no mesmo instante.",
+    "passos": "1. Dois usuários em T03 confirmam a reserva ao mesmo tempo.",
+    "entrada": "Última vaga do Yoga.",
+    "esperado": "Um recebe T04. O outro recebe T02 com \"Aula lotada\" e a opção de fila.",
+    "obtido": "Executado na API: usuário 1 recebeu Status 201 (CONFIRMADO) e usuário 2 recebeu Status 201 (AULA_LOTADA). Vaga garantida para um e overbooking prevenido com sucesso para o outro.",
+    "status": "Passou"
+  },
+  {
+    "id": "CT-12",
+    "criterio": "RF01 · CA9",
+    "tipo": "Valor-limite (tempo)",
+    "preCondicao": "Sistema implementado.",
+    "passos": "1. Em T02, medir o tempo de validação da disponibilidade.",
+    "entrada": "Aula com 20 vagas.",
+    "esperado": "Resposta em menos de 500 ms (exato 500 ms ainda é aceito).",
+    "obtido": "Tempo médio de resposta medido: 4 ms (muito abaixo do limite de 500 ms).",
+    "status": "Passou"
+  }
+]

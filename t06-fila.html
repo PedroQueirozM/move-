@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Fila de Espera</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T06</span>
+    <h2>Fila de espera</h2>
+    <div class="msg wr" id="fila-msg">Você está na fila de espera. Você será notificado se uma vaga abrir.</div>
+    <button class="btn" onclick="go('T07')">Meus agendamentos</button>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T06');
+  </script>
+</body>
+</html>

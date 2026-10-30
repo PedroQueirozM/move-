@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-canvas {
+    background-color: #F6F6F4;
+  }
+  .bg-sidebar {
+    background-color: #111113;
+  }
+  .bg-sidebar-card {
+    background-color: #18181B;
+  }
+
+  /* Move+ Yellow Visual Identity Tokens */
+  .bg-brand-primary,
+  .bg-brand-yellow,
+  .bg-brand-blue {
+    background-color: #FFD400;
+  }
+
+  .hover\:bg-brand-primary-hover:hover,
+  .hover\:bg-brand-yellow-hover:hover,
+  .hover\:bg-brand-blue-hover:hover {
+    background-color: #E6BF00;
+  }
+
+  /* Yellow text for dark backgrounds */
+  .text-brand-primary,
+  .text-brand-yellow {
+    color: #FFD400;
+  }
+
+  /* Accessible darker amber-gold for light surfaces */
+  .text-brand-contrast {
+    color: #B45309;
+  }
+
+  .text-brand-blue {
+    color: #CA8A04;
+  }
+
+  .border-brand-primary,
+  .border-brand-yellow,
+  .border-brand-blue {
+    border-color: #FFD400;
+  }
+
+  .font-display {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #F6F6F4;
+  color: #18181B;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}

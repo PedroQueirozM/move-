@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Reserva Confirmada</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T04</span>
+    <h2>Reserva confirmada</h2>
+    <div class="msg ok" id="confirm-msg">Vaga garantida. Comprovante enviado por notificação.</div>
+    <div class="qr"></div>
+    <p class="mu" style="text-align:center">QR Code para a catraca</p>
+    <button class="btn" onclick="go('T07')">Meus agendamentos</button>
+    <button class="btn s" onclick="go('T01')">Início</button>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T04');
+  </script>
+</body>
+</html>

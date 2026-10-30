@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Cancelar Agendamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T08</span>
+    <h2>Cancelar agendamento</h2>
+    <div id="class-info"></div>
+    <p class="mu">Cancelamento permitido até 2h antes da aula (agora: 10:00).</p>
+    <button class="btn d" onclick="canc()">Confirmar cancelamento</button>
+    <button class="btn s" onclick="go('T07')">Voltar</button>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T08');
+  </script>
+</body>
+</html>

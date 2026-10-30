@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Confirmar Reserva</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T03</span>
+    <h2>Confirmar reserva</h2>
+    <div id="class-info"></div>
+    <p>Aluno: <b id="user-name">Ana Souza</b></p>
+    <button class="btn" onclick="conf()">Confirmar reserva</button>
+    <button class="btn s" onclick="go('T02')">Voltar</button>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T03');
+  </script>
+</body>
+</html>

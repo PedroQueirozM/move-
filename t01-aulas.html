@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Aulas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T01</span>
+    <h2>Aulas de hoje</h2>
+    <div id="class-list"></div>
+    <div class="nav">
+      <div class="a" onclick="go('T01')">Aulas</div>
+      <div onclick="go('T07')">Meus agendamentos</div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T01');
+  </script>
+</body>
+</html>

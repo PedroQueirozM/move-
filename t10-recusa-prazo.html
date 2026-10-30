@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Move+ · RF01 Gerenciar Agendamentos · Cancelamento Não Permitido</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bar" id="top-bar"></div>
+
+  <div class="phone" id="app">
+    <span class="ttl">MOVE+</span>
+    <span class="code">T10</span>
+    <h2>Cancelamento não permitido</h2>
+    <div class="msg er" id="prazo-msg">Faltam menos de 2h para a aula. O cancelamento só é aceito até 2h antes. Se não comparecer, será registrada falta.</div>
+    <button class="btn s" onclick="go('T07')">Voltar</button>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    initPage('T10');
+  </script>
+</body>
+</html>
